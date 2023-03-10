@@ -371,11 +371,11 @@ window.location.origin || (window.location.origin = window.location.protocol + "
 window.movideskChatWidget = {
   show: function () {
     __mdWrap("show", function () {
-      document.getElementById("md-app-widget").style.visibility = "visible"
+      document.getElementById("md-app-widget").style.display = "block"
     })
   }, hide: function () {
     __mdWrap("hide", function () {
-      document.getElementById("md-app-widget").style.visibility = "hidden"
+      document.getElementById("md-app-widget").style.display = "none"
     })
   }, maximize: function () {
     __mdWrap("maximize", function () {
