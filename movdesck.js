@@ -391,4 +391,20 @@ window.movideskChatWidget = {
     })
   }
 };
+
+const movideskContainer = document.getElementsByClassName('md-chat-widget-container'); 
+const isClosed = document.getElementsByClassName('md-chat-widget-btn-open').length; 
+if (isClosed) { 
+  movideskContainer[0].style.display = 'none'
+  document.getElementsByClassName('md-chat-widget-btn-open')[0]
+  .addEventListener('click', () => { 
+    movideskContainer[0].style.display = 'block'; 
+  })
+} else {
+  movideskContainer[0].style.display = 'block'
+  document.getElementsByClassName('md-chat-widget-btn-close')[0]
+    .addEventListener('click', () => { 
+      movideskContainer[0].style.display = 'none'; 
+  })
+}; 
 /**************/
